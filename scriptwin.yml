@@ -1,0 +1,11 @@
+---
+- hosts: win
+  tasks:
+  - name: Ansible create file if it doesn't exist example
+    win_copy:
+      dest: C:\sysinfo.ps1
+      content: |
+          systeminfo
+  - name: Running the script
+    script: C:\sysinfo.ps1
+

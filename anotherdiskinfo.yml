@@ -1,0 +1,9 @@
+---
+- hosts: win
+  tasks:
+  - name: getting disk info
+    win_disk_facts:
+
+  - name: output of first disk size
+    debug:
+      var: ansible_facts.disks[0].size

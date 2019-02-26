@@ -1,0 +1,7 @@
+---
+- hosts: win
+  tasks:
+  - name: checking disk info
+    win_shell: get-disk
+    register: dinfo
+  - debug: var=dinfo.stdout

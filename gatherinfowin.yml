@@ -1,0 +1,10 @@
+---
+- hosts: win
+  tasks:
+  - name: run script
+    win_shell: systeminfo
+    register: any
+ 
+  - debug: "{{ any.stdout }}"
+    
+    

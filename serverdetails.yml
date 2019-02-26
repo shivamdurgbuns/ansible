@@ -1,0 +1,7 @@
+- name: Gather info
+  hosts: win
+  tasks:
+    - debug: var=vars
+    - debug: var=hostvars[winserver]
+    - debug: var=ansible_distribution
+

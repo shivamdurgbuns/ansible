@@ -1,0 +1,7 @@
+- hosts: win
+  tasks: 
+  - name: "runiing script."
+    win_shell: systeminfo
+    register: ans
+  - debug: var=ans.stdout_lines
+
